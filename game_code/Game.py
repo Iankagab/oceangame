@@ -3,7 +3,7 @@
 
 import sys
 sys.path.append('/home/iankagabriele/jogo/game_code')
-from Const import WIN_WIDHT, WIN_HEIGHT
+from Const import WIN_WIDHT, WIN_HEIGHT, MENU_OPTION
 import pygame
 
 from Menu import Menu
@@ -16,17 +16,11 @@ class Game:
 
     def run(self):
         menu = Menu(self.window)  
-        choice = menu.run()  
+        menu_return = menu.run()  
 
-        if choice == "EASY": 
-            shark_scene = shark(self.window) 
-            shark_scene.run()
-        elif choice == "MEDIUM":
-            pass
-            
-        elif choice == "HARD":
-            pass
-            
+        if menu_return in [MENU_OPTION[0], MENU_OPTION[1], MENU_OPTION[2] ]:
+            level = level(self.window, 'EASY') 
+            level_return = level.run()   
 
         pygame.quit()
-
+        quit()
