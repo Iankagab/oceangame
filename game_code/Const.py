@@ -6,7 +6,7 @@ COLOR_GREEN = (0,100,0)
 
 # M
 MENU_OPTION = ('EASY',
-               'MEDDIUM' ,
+               'MEDIUM' ,
                'HARD' ,
                'EXIT')
 

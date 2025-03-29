@@ -1,5 +1,5 @@
 #!/usr/bin/python
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 
 import pygame
 from Const import WIN_WIDHT, WIN_HEIGHT, MENU_OPTION, COLOR_YELLOW, COLOR_WHITE, COLOR_BLACK, COLOR_GREEN
@@ -12,7 +12,7 @@ class Menu:
         self.selected_option = 0  
 
     def run(self):
-        
+
         pygame.mixer_music.load('./asset/music.mp3')
         pygame.mixer_music.play(-1, 0.0)  
 
@@ -28,14 +28,22 @@ class Menu:
                         self.selected_option = (self.selected_option - 1) % len(MENU_OPTION)
                     elif event.key == pygame.K_RETURN: 
                         self.execute_option()
+                        if MENU_OPTION[self.selected_option] == "EASY":
+                            return "EASY"
 
+            
             self.window.fill(COLOR_YELLOW)
 
+            
             self.window.blit(self.surf, self.rect)
 
-            self.menu_text(80, "Ocean Game", (COLOR_GREEN), ((WIN_WIDHT / 2), 90))
+            
+            self.menu_text(80, "Ocean Game", COLOR_GREEN, (WIN_WIDHT / 2, 90))
+
+            
             self.display_menu_options()
 
+            
             pygame.display.update()
 
     def menu_text(self, text_size: int, text: str, text_color: tuple, text_center_pos: tuple):
@@ -62,7 +70,7 @@ class Menu:
             pygame.quit() 
         elif MENU_OPTION[self.selected_option] == 'EASY':
             print("Iniciar jogo em modo EASY")
-        elif MENU_OPTION[self.selected_option] == 'MEDDIUM':
+        elif MENU_OPTION[self.selected_option] == 'MEDIUM':
             print("Iniciar jogo em modo MEDIUM")
         elif MENU_OPTION[self.selected_option] == 'HARD':
             print("Iniciar jogo em modo HARD")
