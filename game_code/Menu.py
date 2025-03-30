@@ -7,7 +7,7 @@ from Const import WIN_WIDHT, WIN_HEIGHT, MENU_OPTION, COLOR_YELLOW, COLOR_WHITE,
 class Menu:
     def __init__(self, window):
         self.window = window
-        self.surf = pygame.image.load('./asset/backgrounds/background4/orig.png')
+        self.surf = pygame.image.load('./asset/background/orig.png')
         self.rect = self.surf.get_rect()
         self.selected_option = 0  
 

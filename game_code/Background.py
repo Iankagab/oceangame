@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from game_code.Entity import Entity
+from Const import WIN_HEIGHT, WIN_WIDHT, ENTITY_SPEED
 
 class Background(Entity):
     def __init__(self, name, position):
@@ -9,4 +10,7 @@ class Background(Entity):
 
 
     def move(self):
+        self.rect.centerx -= ENTITY_SPEED[self.name]
+        if self.rect.right <= 0 :
+            self.rect.left = WIN_WIDHT
         pass

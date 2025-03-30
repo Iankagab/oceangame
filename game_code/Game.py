@@ -7,7 +7,7 @@ from Const import WIN_WIDHT, WIN_HEIGHT, MENU_OPTION
 import pygame
 
 from Menu import Menu
-from Level import shark  
+from Level import Level  
 
 class Game:
     def __init__(self):
@@ -19,7 +19,8 @@ class Game:
         menu_return = menu.run()  
 
         if menu_return in [MENU_OPTION[0], MENU_OPTION[1], MENU_OPTION[2] ]:
-            level = level(self.window, 'EASY') 
+            level = Level(self.window, 'EASY', menu_return)
+            print(f"Classe de level: {type(level)}")   
             level_return = level.run()   
 
         pygame.quit()
