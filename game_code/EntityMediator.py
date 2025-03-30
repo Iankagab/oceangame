@@ -1,8 +1,8 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-from game_code.Entity import Entity
-from game_code.Enemy import Enemy
+from Entity import Entity
+from Enemy import Enemy
 
 class EntityMediador:
 

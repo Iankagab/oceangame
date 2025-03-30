@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-from game_code.Background import Background
+from Background import Background
 from Const import WIN_HEIGHT, WIN_WIDHT
 from Enemy import Enemy
 from Player import Player

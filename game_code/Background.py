@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-from game_code.Entity import Entity
+from Entity import Entity
 from Const import WIN_HEIGHT, WIN_WIDHT, ENTITY_SPEED
 
 class Background(Entity):
