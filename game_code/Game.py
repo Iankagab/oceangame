@@ -7,7 +7,7 @@ from Const import WIN_WIDHT, WIN_HEIGHT, MENU_OPTION
 import pygame
 
 from Menu import Menu
-from Level import Level  
+from game_code.Level import Level  
 
 class Game:
     def __init__(self):

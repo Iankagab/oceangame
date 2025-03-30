@@ -17,8 +17,8 @@ ENTITY_SPEED = {
     'Level1Bg4' : 4,
     'Level1Bg5' : 5,
     'Player1' : 3,
-    'Enemy1' : 3,
-    'Enemy2' : 3,
+    'Enemy1' : 8,
+    'Enemy2' : 8,
 }
 
 
@@ -29,9 +29,10 @@ ENTITY_HEALTH = {
     'Level1Bg3' : 999,
     'Level1Bg4' : 999,
     'Level1Bg5' : 999,
-    'Player1' : 300,
+    'Player1' : 3,
     'Enemy1' : 50,
     'Enemy2' : 50,
+    'Player1Shoot': 1,
 }
 
 # M
@@ -46,7 +47,7 @@ PLAYER_KEY_SHOOT = {
 }
 
 # S
-SPAWN_TIME = 4000
+SPAWN_TIME = 2000
 
 # W
 WIN_WIDHT = 576

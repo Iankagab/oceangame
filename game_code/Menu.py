@@ -72,5 +72,4 @@ class Menu:
             print("Iniciar jogo em modo EASY")
         elif MENU_OPTION[self.selected_option] == 'MEDIUM':
             print("Iniciar jogo em modo MEDIUM")
-        elif MENU_OPTION[self.selected_option] == 'HARD':
-            print("Iniciar jogo em modo HARD")
+    
